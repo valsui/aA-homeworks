@@ -10,6 +10,7 @@ class Queue
 
   def dequeue
     @queue.shift
+    @queue
   end
 
   def show

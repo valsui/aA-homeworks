@@ -12,10 +12,11 @@ class Stack
   def remove
     # removes one element from the stack
     @stack.pop
+    @stack
   end
 
   def show
     # return a copy of the stack
-    @stack.dup
+    @stack
   end
 end
