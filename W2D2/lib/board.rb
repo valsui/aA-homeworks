@@ -56,7 +56,8 @@ class Board
 
   def next_turn(ending_cup_idx, pot)
     # helper method to determine what #make_move returns
-    if @cups[ending_cup_idx].empty?
+    pots_pos = [6, 13]
+    if @cups[ending_cup_idx].length == 1 && !pots_pos.include?(ending_cup_idx)
       :switch
     elsif ending_cup_idx == pot
       :prompt
