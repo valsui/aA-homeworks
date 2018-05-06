@@ -1,0 +1,15 @@
+current directory: /Users/appacademyaccount/Desktop/Homework/W3D3/People/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.0/ext/bootsnap
+/Users/appacademyaccount/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180502-86170-1x9rh16.rb extconf.rb
+creating Makefile
+
+current directory: /Users/appacademyaccount/Desktop/Homework/W3D3/People/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/appacademyaccount/Desktop/Homework/W3D3/People/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/appacademyaccount/Desktop/Homework/W3D3/People/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.0/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20180502-86170-1mw7cxi/bootsnap
