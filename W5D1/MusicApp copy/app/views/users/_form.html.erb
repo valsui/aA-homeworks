@@ -1,0 +1,16 @@
+<%= render 'shared/errors' %>
+<!-- local vars: action_url, action, user, task-->
+<form action= "<%= action_url %>" method="post">
+  <!-- <%# if action == :create %>
+  <input type="hidden" name="_method" value="patch"/>
+  <%# end %> -->
+  <%= auth_token %>
+  <label for="email">Email:</label>
+    <input type="text" name="user[email]" value="<%= user.email%>">
+
+  <label for="password">Password:</label>
+    <input type="password" name="user[password]" value="<%= user.password%>">
+
+
+  <input type="submit" value="<%= task %>">
+</form>

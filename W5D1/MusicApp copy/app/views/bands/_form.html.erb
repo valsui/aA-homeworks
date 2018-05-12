@@ -1,0 +1,17 @@
+<!-- locals: action_url, action, type, band -->
+<!-- need this to create, update, and delete  -->
+
+<%=render 'shared/errors'%>
+<form action="<%=action_url%>" method="post">
+  <% if !action.nil? %>
+  <%= input_hidden(action) %>
+  <% end %>
+  <%= auth_token %>
+
+  <% unless action == :destroy %>
+  <label for="band_name">Band Name</label>
+  <input type="text" name="band[name]" value="<%=band.name%>">
+  <% end %>
+
+  <input type="submit" value="<%=type%>">
+</form>
