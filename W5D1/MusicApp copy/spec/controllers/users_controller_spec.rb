@@ -9,21 +9,22 @@ RSpec.describe UsersController, type: :controller do
       expect(response).to render_template("new")
     end
   end
-
+  #
   describe "POST #create" do
     context "with invalid params" do
-      it "validates the presence of the user's email and password"
-        post :create, params: { user: { email: "vkse@place.com", password: "" } }
+      it "validates the presence of the user's email and password" do
+        post :create, params: { user: { email: "vks@place.com", password: "" } }
         expect(response).to render_template("new")
         expect(flash[:errors]).to be_present
       end
-      it "validates that the password is at least 6 characters long"
+
+      it "validates that the password is at least 6 characters long" do
         post :create, params: { user: { email: "vks@place.com", password: "ghc" } }
         expect(response).to render_template("new")
         expect(flash[:errors]).to be_present
       end
     end
-
+    #
     context "with valid params" do
       it "redirects user to sign-in page on success" do
         post :create, params: { user: { email: "jb@myplace.com", password: "password" } }
@@ -31,6 +32,4 @@ RSpec.describe UsersController, type: :controller do
       end
     end
   end
-
-
 end
